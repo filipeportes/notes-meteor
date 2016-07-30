@@ -1,0 +1,24 @@
+<template name="notes">
+    <h1>My Notes <a class="btn btn-success pull-right" href="/notes/new">Add Note</a></h1>
+
+    {{#each notes}}
+        {{> note}}
+    {{/each}}
+</template>
+
+<template name="note">
+    <div class="panel panel-default">
+
+        <div class="panel-heading">
+            <h3>{{title}}</h3>
+        </div>
+        <div class="panel-body">
+            {{description}}
+        </div>
+        <div class="panel-footer clearfix">
+            <a type="button" class="btn btn-primary" href="/notes/{{_id}}">Edit</a>
+            <a type="button" class="btn btn-danger js-notes-remove">Remove</a>
+        </div>
+
+    </div>
+</template>

@@ -1,0 +1,20 @@
+<template name="noteForm">
+    <form class="js-new-note">
+        <div class="panel panel-default" style="margin-top: 10px;">
+            <div class="panel-heading">
+                <input id="title" name="title" type="text"
+                       value="{{note.title}}"
+                       placeholder="Title" class="form-control" required/>
+            </div>
+            <div class="panel-body">
+                <textarea id="description" name="description" placeholder="description"
+                          value="{{note.description}}"
+                          rows="3" class="form-control" required></textarea>
+            </div>
+            <div class="panel-footer clearfix">
+                <button type="submit" class="btn btn-primary">Save</button>
+                <a type="button" class="btn btn-default" href="/notes">Cancel</a>
+            </div>
+        </div>
+    </form>
+</template>
